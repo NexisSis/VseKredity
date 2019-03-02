@@ -2,14 +2,14 @@ $color-blue: #93a5cf;
 $color-darkGray: #a4a4a4;
 $color-lightGray: #efefef;
 
-.about{
+.preview{
     background-color: $color-lightGray;
     background-image: url(../img/about-intro-bg.png);
     background-repeat: repeat;
     padding: 57px 0;
 }
 
-.about__breadcrumbs{
+.preview__breadcrumbs{
     width: 100%;
     margin-bottom: 50px;
     font-size: 12px;
@@ -23,7 +23,7 @@ $color-lightGray: #efefef;
         &::after{
             display: inline-block;
             content: '→';
-            margin: 0 5px;
+            margin: 0 3px 0 5px;
         }
     }
 }
@@ -48,7 +48,7 @@ $color-lightGray: #efefef;
     font-size: 15px;
 }
 
-.about__advantages{
+.preview__advantages{
     margin-top: -45px;
     box-sizing: border-box;
     padding: 5px;
