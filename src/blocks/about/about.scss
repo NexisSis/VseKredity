@@ -1,0 +1,81 @@
+$color-blue: #93a5cf;
+$color-darkGray: #a4a4a4;
+$color-lightGray: #efefef;
+
+.about{
+    background-color: $color-lightGray;
+    background-image: url(../img/about-intro-bg.png);
+    background-repeat: repeat;
+    padding: 57px 0;
+}
+
+.about__breadcrumbs{
+    width: 100%;
+    margin-bottom: 50px;
+    font-size: 12px;
+}
+
+.breadcrumbs__item{
+    color: $color-darkGray;
+
+    &:not(:last-child){
+        color: $color-blue;
+        &::after{
+            display: inline-block;
+            content: '→';
+            margin: 0 5px;
+        }
+    }
+}
+
+.intro__content{
+    padding: 10px 0 0 25px;
+    width: 70%;
+}
+
+.intro__title{
+    margin-top: 5px;
+    color: $color-blue;
+    font-size: 55px;
+    text-transform: uppercase;
+}
+
+.intro__text{
+    padding: 5px;
+    width: 77%;
+    line-height: 1.6;
+    color: $color-darkGray;
+    font-size: 15px;
+}
+
+.about__advantages{
+    margin-top: -45px;
+    box-sizing: border-box;
+    padding: 5px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-row-gap: 40px;
+    grid-column-gap: 16px;
+}
+
+.advantage{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1fr;
+    grid-gap: 10px;
+    align-content: center;
+    justify-items: center;
+}
+
+.advantage__text{
+    text-align: center;
+    font-size: 18px;
+    width: 80%;
+}
+
+.advantage__img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    object-position: center bottom;
+}

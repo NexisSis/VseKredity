@@ -10,13 +10,15 @@ ul{
 a{
   text-decoration: unset;
 }
-.flex {
+.flex{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
-
+.flex-g-1{
+  flex-grow: 1;
+}
 .flex-j-c{
   justify-content: center;
 }
