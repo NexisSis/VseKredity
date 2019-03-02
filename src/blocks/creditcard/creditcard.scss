@@ -1,0 +1,26 @@
+.creditcard{
+  &__image{
+    height: 132px;
+  }
+  &__item{
+    padding: 30px 40.5px;
+  }
+  &__text-2{
+    display: table;
+    font-weight: bold;
+    margin-top: 23px;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  &__text-1{
+    font-size: 11px;
+    font-weight: bold;
+    color: #7f7f7f;
+  }
+  &__location-1{
+    margin-top: 16px;
+  }
+  &__location-2{
+    margin-left: 10px;
+  }
+}

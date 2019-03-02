@@ -1,0 +1,143 @@
+body{
+  margin:0!important;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+a{
+  text-decoration: unset;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-j-c{
+  justify-content: center;
+}
+.flex-j-s{
+  justify-content: flex-start;
+}
+.flex-j-e{
+  justify-content: flex-end;
+}
+.flex-d-c{
+  flex-direction: column;
+}
+.flex-n-w{
+  flex-wrap: nowrap;
+}
+.flex-a-b{
+  align-items:baseline !important;
+}
+.flex-a-fe{
+  align-items: flex-end;
+}
+.flex-a-fs{
+  align-items: flex-start;
+}
+.grid{
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-columns: auto;
+}
+.grid-c-1{
+  grid-column-start: 1 span;
+}
+.grid-c-2{
+  grid-column-start: 2 span;
+}
+.grid-r-1{
+  grid-row-start: 1 span;
+}
+.grid-r-2{
+  grid-row-start: 2 span;
+}
+.smart-break{
+  display: block;
+}
+.half{
+  width: 50%;
+}
+.third{
+  width: 33.3333%;
+}
+.quarter{
+  width: 25%;
+}
+.reverse{
+  transform: rotate(180deg);
+}
+.underline{
+  text-decoration: underline;
+}
+.z-index{
+  z-index: 99999!important;
+}
+.container{
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.border{
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  &_top{
+    border-top: 1px solid #dddddd;
+  }
+  &_left{
+    border-left: 1px solid #dddddd;
+  }
+  &_right{
+    border-right: 1px solid #dddddd;
+  }
+}
+.text__underline{
+  color: #93a6d0;
+  font-size: 14px;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #93a6d0;
+}
+.button{
+  margin-top: 22px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: 67px;
+  width: 207px;
+  border-radius: 10px;
+  text-shadow: none;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 1px;
+  background-color: #f6d166;
+  outline:none;
+  cursor: pointer;
+  transition: 500ms;
+  font-family: inherit;
+  &:hover{
+    box-shadow: 3px 17px 20px -9px rgba(246,209,102,1);
+  }
+}
+h2{
+  font-size: 31px;
+  margin: 60px 0;
+}
+.strong{
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+}
+.hover{
+  transition: 500ms;
+  &:hover{
+    box-shadow: 0 0 30px -7px #9d9d9d;
+  }
+}

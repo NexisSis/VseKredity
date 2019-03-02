@@ -1,0 +1,30 @@
+.header{
+  box-shadow: 0px 19px 43px -1px #f0f0f0;
+  &__height{
+    height: 100px;
+  }
+  &__location{
+    height: 100%;
+  }
+  &__link{
+    color: black;
+    font-weight: 700;
+    font-size: 14.5px;
+    margin-left: 38px;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    border-bottom: 3px solid transparent;
+    transition: 500ms;
+
+    &:first-child{
+      margin-left: 0;
+    }
+    &:hover{
+     border-color:#93a5cf;
+    }
+  }
+  &__search{
+    margin-left: 57px;
+  }
+}
