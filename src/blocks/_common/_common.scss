@@ -6,7 +6,7 @@ $color-orange: #ff5839;
 $starChar: '★';
 
 @mixin repeat($n, $character: $starChar){
-  $c:"";
+  $c: "";
   @for $i from 1 through $n {
     $c: $c + $character;
  }
@@ -95,8 +95,14 @@ a{
 .full-width{
   width: 100%;
 }
+.half-and-quarter{
+  width: 73.3333333%;
+}
 .half-and-third{
   width: 83.333333333%;
+}
+.seven-and-tenth{
+  width: 70%;
 }
 .reverse{
   transform: rotate(180deg);
@@ -229,7 +235,7 @@ h2{
     padding-left: 2px;
   }
   &:before{
-    color: #ff5839;
+    color: $color-orange;
   }
   &:after{
     color: $color-darkGray;
@@ -254,20 +260,14 @@ h2{
 }
 .bullet{
   margin-bottom: 20px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-image: radial-gradient(circle at right top, #c1e59b 10%, #8fa4d5 80%);
-
   border-radius: 100%;
-
   width: 50px;
   height: 50px;
-
   color: #ffffff;
-
   font-weight: bolder;
   font-size: 20px;
 }
@@ -299,7 +299,6 @@ h2{
 .intro{
   &__content{
       padding: 10px 0 0 25px;
-      width: 70%;
   }
   &__title{
       margin-top: 5px;
