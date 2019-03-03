@@ -1,3 +1,17 @@
+$color-blue: #93a5cf;
+$color-darkGray: #a4a4a4;
+$color-lightGray: #efefef;
+$color-lightestGray: #f7f7f7;
+$color-orange: #ff5839;
+$starChar: '★';
+
+@mixin repeat($n, $character: $starChar){
+  $c:"";
+  @for $i from 1 through $n {
+    $c: $c + $character;
+ }
+   content: $c;
+}
 body{
   margin:0!important;
   font-family: 'IBM Plex Sans', sans-serif;
@@ -77,6 +91,12 @@ a{
 }
 .quarter{
   width: 25%;
+}
+.full-width{
+  width: 100%;
+}
+.half-and-third{
+  width: 83.333333333%;
 }
 .reverse{
   transform: rotate(180deg);
@@ -192,10 +212,32 @@ h2{
   right: 0;
   margin-right: -17px;
 }
+.star-mini{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $color-lightGray;
+  width: 126px;
+  height: 30px;
+  border-radius: 15px;
+  font-size: 16px;
+  &:before, &:after{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    letter-spacing: 1px;
+    padding-left: 2px;
+  }
+  &:before{
+    color: #ff5839;
+  }
+  &:after{
+    color: $color-darkGray;
+  }
+}
 .star{
   &:before{
     position: absolute;
-    background-color: #efefef;
     width: 120px;
     margin-left: -70px;
     margin-top: -66px;
@@ -229,10 +271,70 @@ h2{
   font-weight: bolder;
   font-size: 20px;
 }
+// start-mini-0, start-mini-1, start-mini-2,
+// start-mini-3, start-mini-4, start-mini-5
+@for $before from 0 to 6 {
+  $after: 5 - $before;
+  .star-mini-#{$before}{
+    @extend .star-mini;
+    @if $after > 0{
+      &::after{
+        @include repeat($after);
+      }
+    }
+    @if $before > 0{
+      &::before{
+        @include repeat($before);
+      }
+    }
+  }
+}
 .star-5{
   @extend .star;
   &::before{
     content: '★★★★★';
 
   }
+}
+.intro{
+  &__content{
+      padding: 10px 0 0 25px;
+      width: 70%;
+  }
+  &__title{
+      margin-top: 5px;
+      color: $color-blue;
+      font-size: 55px;
+      text-transform: uppercase;
+  }
+  &__text{
+      padding: 5px;
+      padding-top: 2px;
+      width: 85%;
+      line-height: 1.6;
+      color: $color-darkGray;
+      font-size: 15px;
+  }
+}
+
+.preview{
+    background-color: $color-lightestGray;
+    background-repeat: repeat;
+    padding: 57px 0 71px;
+}
+.preview__breadcrumbs{
+    width: 100%;
+    margin-bottom: 50px;
+    font-size: 12px;
+    .breadcrumbs__item{
+        color: $color-darkGray;
+        &:not(:last-child){
+            color: $color-blue;
+            &::after{
+                display: inline-block;
+                content: '→';
+                margin: 0 3px 0 5px;
+            }
+        }
+    }
 }
