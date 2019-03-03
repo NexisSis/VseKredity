@@ -16,9 +16,13 @@ $color-lightGray: #efefef;
   background-image: url(../img/about-intro-bg.png);
 }
 
-.about-intro__text{
+.about-intro__title{
   color: $color-blue;
   font-size: 55px;
+}
+
+.about-intro__text{
+  color: $color-darkGray;
 }
 
 .advantage{

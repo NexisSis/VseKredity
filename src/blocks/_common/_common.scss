@@ -303,8 +303,6 @@ h2{
   }
   &__title{
       margin-top: 5px;
-      color: $color-blue;
-      font-size: 55px;
       text-transform: uppercase;
   }
   &__text{
@@ -312,7 +310,6 @@ h2{
       padding-top: 2px;
       width: 85%;
       line-height: 1.6;
-      color: $color-darkGray;
       font-size: 15px;
   }
 }
