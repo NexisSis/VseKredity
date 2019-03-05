@@ -10,13 +10,15 @@
     color: black;
     font-weight: 700;
     font-size: 14.5px;
-    margin-left: 38px;
+    margin-left: 28px;
     height: 100%;
     align-items: center;
     display: flex;
     border-bottom: 3px solid transparent;
     transition: 500ms;
-
+    img{
+      margin-right: 6px;
+    }
     &:first-child{
       margin-left: 0;
     }
@@ -24,7 +26,39 @@
      border-color:#93a5cf;
     }
   }
+  &__link_nested{
+    &:after{
+      content: '›';
+      margin-left: 15px;
+      font-size: 25px;
+      transform: rotate(90deg);
+      display: block;
+      color: #9095bb;
+    }
+  }
+  &__link_nested:hover &__nestedlink{
+    opacity: 1;
+  }
   &__search{
     margin-left: 57px;
+  }
+  &__nestedlink{
+    transition: 500ms;
+    opacity: 0;
+    position: absolute;
+    top: 102px;
+    z-index: 2;
+    margin-left: -2px;
+    background-color: #97a6cf;
+    li{
+      transition: 500ms;
+      color: white;
+      border-bottom: 1px solid #b1bee0;
+      display: block;
+      padding: 17px 28px;
+      &:hover{
+        background-color: #7f91bf;
+      }
+    }
   }
 }
