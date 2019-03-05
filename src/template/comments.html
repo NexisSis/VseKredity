@@ -92,16 +92,18 @@
                             Приложите файл
                         </div>
                     </div>
-                    <div class="flex flex-n-w accept">
-                        <button class="button button_with-min">Добавить отзыв</button>
-                        <div class="accept__text">
+                    <div class="accept">
+                        <button class="button accept__button">Добавить отзыв</button>
+                        <div class="accept__form">
                             <div class="input input_type_checkbox input_styled">
-                                <input type="checkbox" name="accept" class="input input__upload_type_checkbox">
+                                <input type="checkbox" id="accept" name="accept" class="input__upload input__upload_type_checkbox">
                                 <div class="input__styled-item input__styled-item_type_checkbox"></div>
                             </div>
-                            Нажимая кнопку «Добавить отзыв» вы соглашаетесь
-                            с политикой обработки персональных данных
-                            и пользовательским соглашением
+                            <label class="accept__text" for="accept">
+                                Нажимая кнопку «Добавить отзыв» вы соглашаетесь
+                                с <a href="#" class="link link_styled">политикой обработки персональных данных
+                                и пользовательским соглашением</a>
+                            </label>
                         </div>
                     </div>
                 </form>

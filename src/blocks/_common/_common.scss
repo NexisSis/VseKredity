@@ -5,6 +5,7 @@ $color-lightestGray: #f7f7f7;
 $color-gray: #eee;
 $color-white: #ffffff;
 $color-orange: #ff5839;
+$color-yellow: #f6d166;
 $starChar: '★';
 
 @mixin repeat($n, $character: $starChar){
@@ -25,6 +26,12 @@ ul{
 }
 a{
   text-decoration: unset;
+}
+.link{
+  &_styled{
+    text-decoration: underline;
+  }
+  color: $color-blue;
 }
 .animated{
   transition: all .2s linear;
@@ -216,10 +223,6 @@ a{
   &:hover{
     box-shadow: 3px 17px 20px -9px rgba(246,209,102,1);
   }
-  &_with-min{
-    min-width: 207px;
-    min-height: 67px;
-  }
   &_size_medium{
     width: 230px;
   }
@@ -240,8 +243,28 @@ a{
     }
   }
 }
-.accept__text{
-  padding: 20px;
+.accept{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  &__form{
+    display: flex;
+    padding: 0 20px;
+    margin-left: 15px;
+  }
+  &__text{
+    width: 70%;
+    color: $color-darkGray;
+    font-size: 14px;
+    margin-left: 20px;
+  }
+  &__button{
+    min-width: 230px;
+    min-height: 67px;
+    margin-top: 0;
+  }
 }
 .form{
   padding: 20px;
@@ -303,13 +326,25 @@ a{
         background: $color-gray;
       }
     }
+    &_type_checkbox{
+      &:checked + .input__styled-item_type_checkbox:after,
+      &:active + .input__styled-item_type_checkbox:after{
+        display: inline-block;
+        content: '✔';
+      }
+    }
   }
   &_type_checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     $size: 20px;
+    border-radius: 5px;
     width: $size;
     height: $size;
+    color: $color-yellow;
   }
-  &__style-item{
+  &__styled-item{
     border-radius: 10px;
     @extend .animated;
     &:after{
