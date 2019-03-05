@@ -1,0 +1,12 @@
+<div class="calculator">
+    <div class="container">
+        <h2>Подобрать займ</h2>
+        <form class="calculator__form">
+            <div class="calculator__money half">
+                <div class="calculator__text-1">Сколько нужно денег?</div>
+                <input type="number" name="rangeInput" class="calculator__number" min="0" max="100000" value="0" readonly>
+                <input type="range"  name="rangeInput" class="calculator__range" min="0" max="100000" value="0" oninput="updateValByName(this.value,this.name);">
+            </div>
+        </form>
+    </div>
+</div>
