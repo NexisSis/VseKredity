@@ -1,0 +1,39 @@
+<div class="container preview preview_not-colored">
+  <div class="preview__breadcrumbs flex flex-j-s">
+    <a href="/" class="breadcrumbs__item">ВсеКредиты.ру</a>
+    <div class="breadcrumbs__item">О нашем проекте</div>
+  </div>
+  <h1>Расскажите о своем опыте</h1>
+  <form class="flex form form_offset_big flex-d-c flex-a-fs border-box">
+    <input class="input input_type_text input_type_login input_offset_big" type="text" name="name" placeholder="Ваше имя">
+    <input class="input input_type_text input_type_email" type="email" name="email" placeholder="Ваш e-mail">
+    <textarea
+      name="comment"
+      class="input input_type_text input_type_textarea input_type_comment"
+      cols="30"
+      rows="8"
+      placeholder="Ваш комментарий"
+    ></textarea>
+    <br>
+    <div class="input input_type_file input_styled input_offset_big">
+      <input type="file" class="input__upload input__upload_type_file">
+      <div class="input__styled-item input__styled-item_type_file">
+        Приложите файл
+      </div>
+    </div>
+    <div class="accept">
+      <button class="button accept__button">Добавить отзыв</button>
+      <div class="accept__form">
+        <div class="input input_type_checkbox input_styled">
+          <input type="checkbox" id="accept" name="accept" class="input__upload input__upload_type_checkbox">
+          <div class="input__styled-item input__styled-item_type_checkbox"></div>
+        </div>
+        <label class="accept__text" for="accept">
+          Нажимая кнопку «Добавить отзыв» вы соглашаетесь
+          с <a href="#" class="link link_styled">политикой обработки персональных данных
+            и пользовательским соглашением</a>
+        </label>
+      </div>
+    </div>
+  </form>
+</div>

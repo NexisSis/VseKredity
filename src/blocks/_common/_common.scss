@@ -644,6 +644,9 @@ h2{
   background-color: $color-lightestGray;
   background-repeat: repeat;
   padding: 57px 0 71px;
+  &_not-colored {
+    background-color: transparent;
+  }
 }
 .preview__breadcrumbs{
   width: 100%;
