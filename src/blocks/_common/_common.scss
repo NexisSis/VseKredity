@@ -93,6 +93,9 @@ a{
 }
 .text-header{
   margin: 55px 0 20px;
+  &_offset-bottom_zero{
+    margin-bottom: 0;
+  }
 }
 .text-blue{
   color: $color-blue;
@@ -595,17 +598,28 @@ h2{
   .star-modified-#{$before},
   .star-big-#{$before},
   .star-mini-#{$before}{
-    &::after{
-      @include repeat($after);
+    @if $after > 0 {
+      &::after{
+        @include repeat($after);
+      }
     }
-    &::before{
-      @include repeat($before);
+    @if $before > 0 {
+      &::before{
+        @include repeat($before);
+      }
     }
  }
 
  .star-modified-#{$before} { @extend .star-modified; }
  .star-big-#{$before} { @extend .star-big; }
  .star-mini-#{$before} { @extend .star-mini; }
+
+  .star-modified-#{$before}_special,
+  .star-big-#{$before}_special,
+  .star-mini-#{$before}_special{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
 }
 .star-5 {
   @extend .star;

@@ -21,7 +21,15 @@ $color-orange: #ff5839;
 
 .comments{
   &__content{
+    flex-wrap: nowrap;
     margin-bottom: 74px;
+  }
+  &__cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-end;
+    padding-left: 10px;
   }
 }
 
