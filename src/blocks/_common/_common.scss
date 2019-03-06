@@ -92,7 +92,7 @@ a{
   font-size: 24px;
 }
 .text-header{
-  margin: 55px 0 20px;
+  margin: 55px 0 30px;
   &_offset-bottom_zero{
     margin-bottom: 0;
   }
@@ -234,6 +234,12 @@ a{
   }
   &_offset-bottom_much{
     margin-bottom: 50px;
+  }
+  &_offset-left_zero{
+    margin-left: 0;
+  }
+  &_offset-right_zero{
+    margin-right: 0;
   }
   &_size_full{
     width: 100%;
