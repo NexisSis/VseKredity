@@ -1,0 +1,52 @@
+$color-blue: #93a5cf;
+$color-darkGray: #a4a4a4;
+$color-gray: #c3c3c3;
+$color-lightGray: #efefef;
+$color-lightestGray: #f7f7f7;
+$color-orange: #ff5839;
+$color-border-gray: #dddddd;
+
+.problems-and-advatages{
+  &__grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+}
+.good-part{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  padding: 15px 0;
+  font-weight: bold;
+  font-size: 16px;
+  &:not(:last-child){
+    border-bottom: 1px solid $color-border-gray;
+  }
+  &:before{
+    content: '';
+    display: block;
+    // Replace
+    background: url(../img/like-icon.png);
+    background-size: 100% 100%;
+    margin: 0 10px 0 0;
+    $size: 18px;
+    min-width: $size;
+    min-height: $size;
+  }
+}
+.bad-part{
+  @extend .good-part;
+  &:before{
+    // Replace
+    background: url(../img/dislike-icon.png);
+    background-size: 100% 100%;
+  }
+}
+.problems-and-advatages{
+  &__image-desc{
+    padding: 0 0 20px;
+    border-bottom: 1px solid $color-border-gray;
+  }
+}
