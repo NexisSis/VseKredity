@@ -272,9 +272,10 @@ a{
 }
 .section{
   display: grid;
-  grid-template-columns: 74.3333333% 25.6666666%;
+  grid-template-columns: calc(74.3333333% - 15px) calc(25.6666666% - 15px);
   padding-top: 60px;
   grid-gap: 30px;
+  box-sizing: border-box;
 }
 .accept{
   display: flex;
@@ -300,6 +301,10 @@ a{
   }
 }
 .form{
+  &_type_blue{
+    background: $color-blue;
+    color: $color-white;
+  }
   padding: 20px;
   background-color: $color-lightestGray;
   border-radius: 10px;
