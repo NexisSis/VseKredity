@@ -5,6 +5,7 @@ $color-lightestGray: #f7f7f7;
 $color-gray: #eee;
 $color-white: #ffffff;
 $color-orange: #ff5839;
+$color-yellow: #f6d166;
 $starChar: '★';
 
 @mixin repeat($n, $character: $starChar){
@@ -25,6 +26,12 @@ ul{
 }
 a{
   text-decoration: unset;
+}
+.link{
+  &_styled{
+    text-decoration: underline;
+  }
+  color: $color-blue;
 }
 .animated{
   transition: all .2s linear;
@@ -85,7 +92,10 @@ a{
   font-size: 24px;
 }
 .text-header{
-  margin: 55px 0 20px;
+  margin: 55px 0 30px;
+  &_offset-bottom_zero{
+    margin-bottom: 0;
+  }
 }
 .text-blue{
   color: $color-blue;
@@ -216,10 +226,6 @@ a{
   &:hover{
     box-shadow: 3px 17px 20px -9px rgba(246,209,102,1);
   }
-  &_with-min{
-    min-width: 207px;
-    min-height: 67px;
-  }
   &_size_medium{
     width: 230px;
   }
@@ -228,6 +234,12 @@ a{
   }
   &_offset-bottom_much{
     margin-bottom: 50px;
+  }
+  &_offset-left_zero{
+    margin-left: 0;
+  }
+  &_offset-right_zero{
+    margin-right: 0;
   }
   &_size_full{
     width: 100%;
@@ -240,8 +252,28 @@ a{
     }
   }
 }
-.accept__text{
-  padding: 20px;
+.accept{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+  &__form{
+    display: flex;
+    padding: 0 20px;
+    margin-left: 15px;
+  }
+  &__text{
+    width: 70%;
+    color: $color-darkGray;
+    font-size: 14px;
+    margin-left: 20px;
+  }
+  &__button{
+    min-width: 230px;
+    min-height: 67px;
+    margin-top: 0;
+  }
 }
 .form{
   padding: 20px;
@@ -260,13 +292,43 @@ a{
   @extend .animated;
   outline: none;
   &_type_text{
-    padding: 26px 20px 24px 54px;
+    padding: 20px 0 27px 54px;
     width: 100%;
+    font-size: 14px;
     margin-bottom: 10px;
-    background-image: url(../img/avatar.png);
     background-repeat: no-repeat;
-    background-position: 20px 24px;
-    background-size: 24px 24px;
+    background-position: 26px 20px;
+    $size: 14px;
+    background-size: $size $size;
+  }
+  &_type_email{
+    background-image: url(../img/email-icon.png);
+  }
+  &_type_login{
+    background-image: url(../img/user-icon.png);
+  }
+  &_type_advantages{
+    background-image: url(../img/like-icon.png);
+  }
+  &_type_problems{
+    background-image: url(../img/dislike-icon.png);
+  }
+  &_type_textarea{
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  &_type_comment{
+    background-image: url(../img/comment-icon.png);
+  }
+  &_offset_big{
+    margin-bottom: 30px;
+    &:first-child{
+      margin-bottom: 20px;
+      margin-top: 10px;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
   }
   &:focus{
     box-shadow: 0px 3px 7px rgba(0,0,0, 0.03);
@@ -278,7 +340,7 @@ a{
     position: relative;
   }
   &_type_file{
-    margin-top: 5px;
+    margin-top: -7px;
     border: 2px dashed $color-darkGray;
     background: transparent;
     width: 100%;
@@ -303,13 +365,25 @@ a{
         background: $color-gray;
       }
     }
+    &_type_checkbox{
+      &:checked + .input__styled-item_type_checkbox:after,
+      &:active + .input__styled-item_type_checkbox:after{
+        display: inline-block;
+        content: '✔';
+      }
+    }
   }
   &_type_checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     $size: 20px;
+    border-radius: 5px;
     width: $size;
     height: $size;
+    color: $color-yellow;
   }
-  &__style-item{
+  &__styled-item{
     border-radius: 10px;
     @extend .animated;
     &:after{
@@ -333,7 +407,7 @@ a{
       margin-top: 10px;
       display: block;
       content: '';
-      background: url(../img/avatar.png);
+      background: url(../img/file-icon.png);
       $size: 50px;
       background-size: $size $size;
       width: $size;
@@ -464,53 +538,52 @@ h2{
 
   }
 }
-
-//.star{
-//  display: flex;
-//  justify-content: center;
-//  align-items: center;
-//  background: $color-lightGray;
-//  width: 126px;
-//  height: 30px;
-//  border-radius: 15px;
-//  font-size: 16px;
-//  &:before, &:after{
-//    display: flex;
-//    justify-content: space-around;
-//    align-items: center;
-//    letter-spacing: 4px;
-//    padding-left: 2px;
-//  }
-//  &:before{
-//    color: $color-orange;
-//  }
-//  &:after{
-//    color: $color-darkGray;
-//  }
-//}
-//.star-big{
-//  display: flex;
-//  justify-content: center;
-//  align-items: center;
-//  background: $color-lightGray;
-//  width: 182px;
-//  height: 46px;
-//  border-radius: 25px;
-//  font-size: 24px;
-//  &:before, &:after{
-//    display: flex;
-//    justify-content: space-around;
-//    align-items: center;
-//    letter-spacing: 4px;
-//    padding-left: 2px;
-//  }
-//  &:before{
-//    color: $color-orange;
-//  }
-//  &:after{
-//    color: $color-darkGray;
-//  }
-//}
+.star-modified{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background: $color-lightGray;
+ width: 126px;
+ height: 30px;
+ border-radius: 15px;
+ font-size: 16px;
+ &:before, &:after{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   letter-spacing: 4px;
+   padding-left: 2px;
+ }
+ &:before{
+   color: $color-orange;
+ }
+ &:after{
+   color: $color-darkGray;
+ }
+}
+.star-big{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background: $color-lightGray;
+ width: 182px;
+ height: 46px;
+ border-radius: 25px;
+ font-size: 24px;
+ &:before, &:after{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   letter-spacing: 4px;
+   padding-left: 2px;
+ }
+ &:before{
+   color: $color-orange;
+ }
+ &:after{
+   color: $color-darkGray;
+ }
+}
 .bullet{
   margin-bottom: 20px;
   display: flex;
@@ -524,32 +597,40 @@ h2{
   font-weight: bolder;
   font-size: 20px;
 }
-// start-mini-0, start-mini-1, start-mini-2,
-// start-mini-3, start-mini-4, start-mini-5
-//@for $before from 0 to 6 {
-//  $after: 5 - $before;
-//  .star-#{$before},
-//  .star-big-#{$before},
-//  .star-mini-#{$before}{
-//    &::after{
-//      @include repeat($after);
-//    }
-//    &::before{
-//      @include repeat($before);
-//    }
-//  }
-//
-//  .star-#{$before} { @extend .star; }
-//  .star-big-#{$before} { @extend .star-big; }
-//  .star-mini-#{$before} { @extend .star-mini; }
-//}
-//.star-5{
-//  @extend .star;
-//  &::before{
-//    content: '★★★★★';
-//
-//  }
-//}
+// str-0, str-1, str-2,
+// str-3, str-4, str-5
+@for $before from 0 to 6 {
+  $after: 5 - $before;
+  .star-modified-#{$before},
+  .star-big-#{$before},
+  .star-mini-#{$before}{
+    @if $after > 0 {
+      &::after{
+        @include repeat($after);
+      }
+    }
+    @if $before > 0 {
+      &::before{
+        @include repeat($before);
+      }
+    }
+ }
+
+ .star-modified-#{$before} { @extend .star-modified; }
+ .star-big-#{$before} { @extend .star-big; }
+ .star-mini-#{$before} { @extend .star-mini; }
+
+  .star-modified-#{$before}_special,
+  .star-big-#{$before}_special,
+  .star-mini-#{$before}_special{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+.star-5 {
+  @extend .star;
+  &::before{ @include repeat(5) }
+}
 .intro{
   &__content{
     padding: 10px 0 0 25px;
@@ -569,6 +650,9 @@ h2{
   background-color: $color-lightestGray;
   background-repeat: repeat;
   padding: 57px 0 71px;
+  &_not-colored {
+    background-color: transparent;
+  }
 }
 .preview__breadcrumbs{
   width: 100%;
