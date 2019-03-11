@@ -5,29 +5,203 @@
   &__form{
 
   }
+  &__money{
+    position: relative;
+    margin-bottom: 23px;
+  }
   &__number{
     display: block;
-    height: 53px;
     border-radius: 10px;
-    background-color: white;
-    width: 500px;
+    background-color: #fff;
+    width: 97%;
     border: 0;
-    outline: none;
+    outline: 0;
     font-size: 25px;
-    padding: 10px 35px;
+    padding: 24px 32px 23px;
     color: #93a5cd;
+    box-sizing: border-box;
   }
   &__rub{
-    &:after{
-      content: '₽';
-      font-weight: bold;
-    }
+    color: #a5a5a5;
+    position: absolute;
+    right: 50px;
+    top: 55px;
+    font-size: 28px;
+    font-weight: bold;
   }
   &__range{
     display: block;
+    width: 96%;
+    margin-top: -12px;
+    border-radius: 54px;
   }
   &__text-1{
     font-size: 16px;
-    color: #7d7d7d;
+    color: #a1a1a1;
+    padding-bottom: 15px;
+    font-weight: bold;
+  }
+  &__breadcrumbs{
+    padding-top: 60px;
+    margin-bottom: 20px !important;
+  }
+  &__title{
+    padding-top: 0px;
+    padding-bottom: 30px;
+  }
+  &__label{
+    @extend .main__label;
+    background-color: #93a4cf!important;
+    margin-right: 7px;
+  }
+  &__text-2{
+    color: #93a4cf!important;
+    margin-right: 20px;
+    font-size: 15px;
+  }
+  &__text-3{
+    margin-left: 17px;
+    margin-right: 47px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: black;
+  }
+  &__text{
+    margin-bottom: 0;
   }
 }
+
+
+
+//Slide
+// excess height to improve interactive area / accessibility
+$height: 15px;
+$thumb-height: 13px;
+$track-height: 3px;
+
+// colours
+$upper-color: #cfcfcf;
+$lower-color: #f6d166;
+$thumb-color: #f6d166;
+$thumb-hover-color: #f6d166;
+
+$upper-background: linear-gradient(to bottom, $upper-color, $upper-color) 100% 50% / 100% $track-height no-repeat transparent;
+$lower-background: linear-gradient(to bottom, $lower-color, $lower-color) 100% 50% / 100% $track-height no-repeat transparent;
+
+// Webkit cannot style progress so we fake it with a long shadow
+// on the thumb element
+@function webkit-slider-thumb-shadow($i: 1) {
+  $val: #{$i}px 0 0 -#{($thumb-height - $track-height) / 2} #{$upper-color};
+  @if $i == 1 {
+    @for $k from 2 through 1000 {
+      $val: #{$val}, webkit-slider-thumb-shadow($k);
+    }
+  }
+  @return $val;
+}
+
+.e-range {
+  display: block;
+  appearance: none;
+  margin-top: -9px;
+  height: $height;
+  overflow: hidden;
+  cursor: pointer;
+  background: transparent;
+  &:focus {
+    outline: none;
+  }
+}
+
+// Webkit
+.e-range::-webkit-slider-runnable-track {
+  height: $height;
+  background: $lower-background;
+}
+
+.e-range::-webkit-slider-thumb {
+  position: relative;
+  appearance: none;
+  height: $thumb-height;
+  width: $thumb-height;
+  background: $thumb-color;
+  border-radius: 100%;
+  top: 50%;
+  margin-top: (-$thumb-height/2);
+  box-shadow: webkit-slider-thumb-shadow();
+  transition: background-color 150ms;
+  border: 3px solid white;
+}
+
+
+// Firefox
+.e-range::-moz-range-track,
+.e-range::-moz-range-progress {
+  width: 100%;
+  height: $height;
+  background: $upper-background;
+}
+
+.e-range::-moz-range-progress {
+  background: $lower-background;
+}
+
+.e-range::-moz-range-thumb {
+  appearance: none;
+  margin: 0;
+  height: $thumb-height;
+  width: $thumb-height;
+  background: $thumb-color;
+  border-radius: 100%;
+  transition: background-color 150ms;
+  border: 3px solid white;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
+}
+
+// Internet Exploder
+.e-range::-ms-track {
+  width: 100%;
+  height: $height;
+  // color needed to hide track marks
+  color: transparent;
+  background: transparent;
+}
+
+.e-range::-ms-fill-lower {
+  background: $lower-background;
+}
+
+.e-range::-ms-fill-upper {
+  background: $upper-background;
+}
+
+.e-range::-ms-thumb {
+  appearance: none;
+  height: $thumb-height;
+  width: $thumb-height;
+  background: $thumb-color;
+  border-radius: 100%;
+  border: 0;
+  transition: background-color 150ms;
+  // IE Edge thinks it can support -webkit prefixes
+  top: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+.e-range:hover,
+.e-range:focus {
+
+  &::-webkit-slider-thumb {
+    background-color: $thumb-hover-color;
+  }
+  &::-moz-range-thumb {
+    background-color: $thumb-hover-color;
+  }
+  &::-ms-thumb {
+    background-color: $thumb-hover-color;
+  }
+}
+

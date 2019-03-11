@@ -178,6 +178,19 @@ a{
 .z-index{
   z-index: 99999!important;
 }
+.stretch{
+  align-self: stretch;
+}
+.nested{
+  &:after{
+    content: '›';
+    margin-left: 9px;
+    font-size: 15px;
+    transform: rotate(90deg);
+    display: inline-block;
+    color: #9095bb;
+  }
+}
 .container{
   max-width: 1170px;
   margin-left: auto;
@@ -195,6 +208,9 @@ a{
   }
   &_right{
     border-right: 1px solid #dddddd;
+  }
+  &_bottom{
+    border-bottom: 1px solid #dddddd;
   }
 }
 .text__underline{

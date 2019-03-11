@@ -1,0 +1,14 @@
+.sortBy{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  &__item{
+    @extend .sortTab__item;
+    position: relative;
+  }
+  &__text{
+    font-size: 13.5px;
+    font-weight: bold;
+    margin-right: 16px;
+    color: #a4a4a4;
+  }
+}

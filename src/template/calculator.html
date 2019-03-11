@@ -1,11 +1,36 @@
 <div class="calculator">
     <div class="container">
-        <h2>Подобрать займ</h2>
-        <form class="calculator__form">
+        <div class="preview__breadcrumbs calculator__breadcrumbs flex flex-j-s">
+            <a href="/" class="breadcrumbs__item">ВсеКредиты.ру</a>
+            <a href="/zaimi" class="breadcrumbs__item">Займы</a>
+        </div>
+        <h2 class="calculator__title">Подобрать займ</h2>
+        <form class="calculator__form flex">
             <div class="calculator__money half">
                 <div class="calculator__text-1">Сколько нужно денег?</div>
-                <input type="number" name="rangeInput" class="calculator__number calculator__rub" min="0" max="100000" value="0" readonly>
-                <input type="range"  name="rangeInput" class="calculator__range" min="0" max="100000" value="0" oninput="updateValByName(this.value,this.name);">
+                <input type="text" name="howMuchInputVal" class="calculator__number" min="0" max="100000" value="100 000" readonly>
+                <input type="range"  name="howMuchInput"  class="calculator__range e-range" min="0" max="100000" value="100000" oninput="updateValByName(this.value,this.name);">
+                <div class="calculator__rub">₽</div>
+            </div>
+            <div class="calculator__money half">
+                <div class="calculator__text-1">На какой срок берете?</div>
+                <input type="text" name="timeInputVal" class="calculator__number" min="0" max="48" value="24" readonly>
+                <input type="range"  name="timeInput"  class="calculator__range e-range" min="0" max="48" value="24" oninput="updateValByName(this.value,this.name);">
+            </div>
+            <div class="calculator__money third">
+                <div class="calculator__text-1">Сколько вам лет?</div>
+                <input type="text" name="ageInputVal" class="calculator__number" min="0" max="100" value="24" readonly>
+                <input type="range"  name="ageInput"  class="calculator__range e-range" min="0" max="100" value="24" oninput="updateValByName(this.value,this.name);">
+            </div>
+            <div class="calculator__money calculator__text flex">
+                <div class="calculator__label">198</div>
+                <div class="calculator__text-2">финансовых организаций</div>
+                <div class="calculator__label">764</div>
+                <div class="calculator__text-2">предложений</div>
+            </div>
+            <div class="calculator__money calculator__text flex">
+                <img class="calculator__image" src="img/pickup.png" alt="Подобрать займ" >
+                <a href="#"><div class="calculator__text-3">Подобрать займ</div></a>
             </div>
         </form>
     </div>
