@@ -89,9 +89,6 @@ a{
 .text-gray{
   color: $color-darkGray;
 }
-.text-left-offset{
-  padding-left: 20px;
-}
 .text-small{
   font-size: 14px;
   font-weight: 400;
@@ -99,16 +96,11 @@ a{
 .text-base-padding{
   padding: 5px 15px;
 }
-.text-sub-title{
-  font-size: 24px;
-  &_lvl_3{
-    font-size: 18px;
-  }
-}
 .border-radius {
   border-radius: 10px;
 }
 .text-header{
+  font-size: 24px;
   margin: 55px 0 30px;
   &_offset-bottom_zero{
     margin-bottom: 0;
@@ -116,8 +108,22 @@ a{
   &_offset-top_zero{
     margin-top: 0;
   }
+  &_offset_small{
+    margin: 15px 0 20px;
+  }
   &_lvl_3{
     font-weight: 500;
+    font-size: 22px;
+    margin: 35px 0 20px;
+  }
+  &_lvl_2{
+    font-weight: 700;
+    font-size: 24px;
+  }
+  &_lvl_1{
+    font-size: 42px;
+    font-weight: bolder;
+    margin: 28px 0 40px;
   }
 }
 .grid-50-50{
@@ -125,6 +131,9 @@ a{
   display: grid;
   grid-template-columns: 50% 50%;
   grid-gap: 20px;
+}
+.text-transparent{
+  color: transparent;
 }
 .text-blue{
   color: $color-blue;
@@ -204,9 +213,21 @@ a{
 .blockquote{
   border-radius: 5px;
   padding: 0 20px;
-  font-size: 14px;
   font-style: italic;
+  line-height: 1.6;
   border-left: 4px solid $color-blue;
+}
+.relative{
+  position: relative;
+}
+.full-hr{
+  margin-top: 20px;
+  position: absolute;
+  left: -100vw;
+  top: 0;
+  min-width: 200vw;
+  min-height: 1px;
+  background: $color-border-gray;
 }
 .reverse{
   transform: rotate(180deg);
@@ -308,6 +329,9 @@ a{
   &_offset-right_zero{
     margin-right: 0;
   }
+  &_offset_none{
+    margin: 0;
+  }
   &_size_full{
     width: 100%;
   }
@@ -321,7 +345,7 @@ a{
 }
 .section{
   display: grid;
-  grid-template-columns: calc(74.3333333% - 15px) calc(25.6666666% - 15px);
+  grid-template-columns: calc(74.3333333% - 10px) calc(25.6666666% - 20px);
   padding-top: 60px;
   grid-gap: 30px;
   box-sizing: border-box;
@@ -332,9 +356,24 @@ a{
 .text-block{
   &_offseted{
     margin: 20px 0;
+    &-x2{
+      margin: 40px 0;
+    }
+  }
+  &_offseted-full{
+    margin: 20px;
   }
   &_offset_bottom{
     margin-bottom: 20px;
+  }
+  &_offset_top{
+    margin-top: 20px;
+  }
+  &_offset_left{
+    margin-left: 10px;
+  }
+  &_lined{
+    line-height: 1.6;
   }
 }
 .accordeon{
@@ -481,8 +520,10 @@ a{
   }
 }
 .table{
-  // &_styled {}
+  width: 100%;
+  text-align: left;
   border-collapse: collapse;
+  margin: 20px 0;
   &__row:not(:last-child){
     border-bottom: 1px solid $color-border-gray;
   }
@@ -491,12 +532,17 @@ a{
   }
   &__head{
     text-align: left;
-  }
-  &__column, &__head {
     padding: 20px;
+    padding-top: 20px;
+    padding-left: 0;
   }
-  width: 100%;
-  text-align: left;
+  &__column {
+    vertical-align: top;
+    text-align: left;
+    padding-left: 0;
+    width: 33.3333333333333%;
+    padding: 25px 0 20px;
+  }
 }
 .accept{
   display: flex;
@@ -525,6 +571,8 @@ a{
   &_type_blue{
     background: $color-blue;
     color: $color-white;
+    font-size: 18px;
+    padding: 28px 30px;
   }
   padding: 20px;
   background-color: $color-lightestGray;
