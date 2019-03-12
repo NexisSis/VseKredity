@@ -34,6 +34,9 @@ a{
   }
   color: $color-blue;
 }
+.shadowed{
+  box-shadow: 0 0 30px -7px #9d9d9d;
+}
 .marked{
   background: $color-yellow;
   padding: 0 4px;
@@ -98,12 +101,30 @@ a{
 }
 .text-sub-title{
   font-size: 24px;
+  &_lvl_3{
+    font-size: 18px;
+  }
+}
+.border-radius {
+  border-radius: 10px;
 }
 .text-header{
   margin: 55px 0 30px;
   &_offset-bottom_zero{
     margin-bottom: 0;
   }
+  &_offset-top_zero{
+    margin-top: 0;
+  }
+  &_lvl_3{
+    font-weight: 500;
+  }
+}
+.grid-50-50{
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 20px;
 }
 .text-blue{
   color: $color-blue;
@@ -276,6 +297,178 @@ a{
   padding-top: 60px;
   grid-gap: 30px;
   box-sizing: border-box;
+  &_offset_zero{
+    padding-top: 0;
+  }
+}
+.text-block{
+  &_offseted{
+    margin: 20px 0;
+  }
+  &_offset_bottom{
+    margin-bottom: 20px;
+  }
+}
+.accordeon{
+  &__item{
+    cursor: pointer;
+    @extend .hover;
+    position: relative;
+    padding: 30px 20px;
+    border: 1px solid $color-border-gray;
+    overflow: hidden;
+    &_active{
+      @extend .shadowed;
+      & .accordeon__content{
+        margin-top: 20px;
+        height: auto;
+      }
+      // add specify for selector
+      .accordeon &::after, &:hover:after{
+        color: $color-white;
+        border-color: $color-white;
+        background-image: radial-gradient(circle at right bottom, #c1e59b 10%, #8fa4d5 80%) !important;
+        transform: rotate(-90deg) !important;
+      }
+    }
+    &::after{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      box-sizing: border-box;
+
+      content: '›';
+
+      @extend .animated;
+      border: 1px solid #dddddd;
+      border-radius: 24px;
+
+      background-color: white;
+      color: $color-blue;
+
+      $size: 34px;
+      max-width: $size;
+      max-height: $size;
+      width: $size;
+      height: $size;
+
+      overflow: hidden;
+
+      font-size: 25px;
+
+      position: absolute;
+      top: 20px;
+      right: 20px;
+
+      overflow: hidden;
+
+      transform-origin: 50% 50%;
+      transform: rotate(90deg);
+      padding-bottom: 5px;
+    }
+    &:hover:after{
+      transform: rotate(0deg);
+      background-color: #8fa4d5;
+      background-image: none;
+      color: $color-white;
+    }
+  }
+  &__item:first-child{
+    border-radius: 20px 20px 0 0;
+  }
+  &__item:last-child{
+    border-radius: 0 0 20px 20px;
+  }
+  &__title{
+    font-weight: bold;
+  }
+  &__content{
+    height: 0;
+    overflow: hidden;
+    @extend .animated;
+  }
+}
+.paginator{
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  &__tabs{
+    margin-bottom: -1px;
+    grid-column-gap: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  &__tab{
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 16px;
+    background: $color-lightGray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid $color-border-gray;
+    border-bottom-color: $color-lightGray;
+    z-index: 1000;
+    &_active{
+      border-bottom-color: $color-white;
+      background: $color-white;
+    }
+  }
+  &__content{
+    border-radius: 0 0 10px 10px;
+    border: 1px solid $color-border-gray;
+    @extend .hover;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color-white;
+  }
+  &__prev, &__next{
+    width: 34px;
+    height: 34px;
+    border: 1px solid #dddddd;
+    border-radius: 24px;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 0px;
+    display: block;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 51%;
+  }
+  &__prev{
+    margin-left: -17px;
+  }
+  &__next{
+    right: 0;
+    margin-right: -17px;
+  }
+}
+.table{
+  // &_styled {}
+  border-collapse: collapse;
+  &__row:not(:last-child){
+    border-bottom: 1px solid $color-border-gray;
+  }
+  &__row &__column:first-child{
+    color: $color-darkGray;
+  }
+  &__head{
+    text-align: left;
+  }
+  &__column, &__head {
+    padding: 20px;
+  }
+  width: 100%;
+  text-align: left;
 }
 .accept{
   display: flex;
@@ -640,6 +833,15 @@ h2{
   &_size_small{
     font-size: 14px;
     $size: 30px;
+    width: $size;
+    height: $size;
+    min-width: $size;
+    min-height: $size;
+  }
+  &_size_smallest{
+    font-size: 0;
+    $size: 10px;
+    margin-top: 3px;
     width: $size;
     height: $size;
     min-width: $size;
