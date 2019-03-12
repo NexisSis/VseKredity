@@ -212,6 +212,18 @@ a{
   &_bottom{
     border-bottom: 1px solid #dddddd;
   }
+  &_t-l-r-10{
+    border-top-left-radius: 10px;
+  }
+  &_b-l-r-10{
+    border-bottom-left-radius: 10px;
+  }
+  &_t-r-r-10{
+    border-top-right-radius: 10px;
+  }
+  &_b-r-r-10{
+    border-bottom-right-radius: 10px;
+  }
 }
 .text__underline{
   color: #93a6d0;
