@@ -1,5 +1,5 @@
 function updateValByName(val,inputName) {
-    $("input[name=" + inputName + "]").val(val);
+    $("input[name=" + inputName + "Val]").val(val.replace(/.{3}$/, ' $&'));
 }
 
 $(".accordeon__item").on("click", function () {

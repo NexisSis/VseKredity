@@ -1,0 +1,29 @@
+.paginator{
+  margin-top: 30px;
+  &__item{
+    font-size: 13.6px;
+    font-weight: bold;
+    padding: 23px;
+    color: black;
+    transition: 500ms;
+    &:hover{
+      color: #b1b1b1;
+    }
+    &_nested{
+      color:black;
+      margin-left: 18px;
+      margin-right: 9px;
+      font-weight: bold;
+      transition: 500ms;
+      height: 100%;
+      border-bottom: 3px solid transparent;
+      &:hover{
+        color: #93a4d0;
+        border-bottom: 3px solid #93a4d0;
+      }
+      &:first-child{
+        margin-left: 9px;
+      }
+    }
+  }
+}

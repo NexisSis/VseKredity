@@ -217,6 +217,19 @@ a{
 .z-index{
   z-index: 99999!important;
 }
+.stretch{
+  align-self: stretch;
+}
+.nested{
+  &:after{
+    content: '›';
+    margin-left: 9px;
+    font-size: 15px;
+    transform: rotate(90deg);
+    display: inline-block;
+    color: #9095bb;
+  }
+}
 .container{
   max-width: 1170px;
   margin-left: auto;
@@ -234,6 +247,21 @@ a{
   }
   &_right{
     border-right: 1px solid #dddddd;
+  }
+  &_bottom{
+    border-bottom: 1px solid #dddddd;
+  }
+  &_t-l-r-10{
+    border-top-left-radius: 10px;
+  }
+  &_b-l-r-10{
+    border-bottom-left-radius: 10px;
+  }
+  &_t-r-r-10{
+    border-top-right-radius: 10px;
+  }
+  &_b-r-r-10{
+    border-bottom-right-radius: 10px;
   }
 }
 .text__underline{
