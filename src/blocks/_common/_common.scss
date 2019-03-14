@@ -382,6 +382,13 @@ a{
       box-shadow: 3px 17px 20px -9px $color-lightGray;
     }
   }
+  &_type_white{
+    min-width: 250px;
+    background: $color-white;
+    &:hover{
+      box-shadow: 3px 17px 20px -9px $color-lightGray;
+    }
+  }
   &_flexed{
     display: flex;
   }

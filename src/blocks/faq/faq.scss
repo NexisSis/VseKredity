@@ -1,0 +1,27 @@
+$color-blue: #93a5cf;
+$color-darkGray: #a4a4a4;
+$color-lightGray: #efefef;
+$color-lightestGray: #f7f7f7;
+$color-border-gray: #dddddd;
+$color-gray: #eee;
+$color-white: #ffffff;
+$color-orange: #ff5839;
+$color-yellow: #f6d166;
+$starChar: '★';
+
+.faq{
+  margin-top: 30px;
+  background: url(../img/about-intro-bg.png);
+  background-size: 100% 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 10px;
+  background-color: $color-lightestGray;
+  &__assistent{
+    margin: -100px 0 -20px;
+  }
+}
