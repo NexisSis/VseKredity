@@ -1,0 +1,177 @@
+<div class="calculator">
+  <div class="container">
+    <div class="preview__breadcrumbs calculator__breadcrumbs flex flex-j-s">
+      <a href="/" class="breadcrumbs__item">ВсеКредиты.ру</a>
+      <a href="#" class="breadcrumbs__item">Калькулятор займов</a>
+    </div>
+    <h2 class="calculator__title">Подобрать займ</h2>
+    <form class="calculator__form grid grid-t-c-3">
+      <div class="calculator__money">
+        <div class="calculator__text-1">Сколько нужно денег?</div>
+        <input type="text" name="howMuchInputVal" class="calculator__number" min="0" max="100000" value="100 000"
+          readonly>
+        <input type="range" name="howMuchInput" class="calculator__range e-range" min="0" max="100000" value="100000"
+          oninput="updateValByName(this.value,this.name);">
+        <div class="calculator__rub">₽</div>
+      </div>
+      <div class="calculator__money">
+        <div class="calculator__text-1">На какой срок берете?</div>
+        <input type="text" name="timeInputVal" class="calculator__number" min="0" max="48" value="24" readonly>
+        <input type="range" name="timeInput" class="calculator__range e-range" min="0" max="48" value="24"
+          oninput="updateValByName(this.value,this.name);">
+      </div>
+      <div class="calculator__money">
+        <div class="calculator__text-1">Какая процентная ставка?</div>
+        <input type="text" name="percentInputVal" class="calculator__number" min="0" max="100" value="24" readonly>
+        <input type="range" name="percentInput" class="calculator__range e-range" min="0" max="100" value="24"
+          oninput="updateValByName(this.value,this.name);">
+      </div>
+      <div class="calculator__money calculator__text flex full-width flex-j-s">
+        <button class="button button_flexed button_size_big button_offset_none flex-j-c flex-a-c button_items-offseted">
+          <img class="calculator__image" src="img/pickup.png" alt="Подобрать займ">
+          <span>Расчитать</span>
+        </button>
+      </div>
+    </form>
+    <div class="grid grid-t-c-3 grid-g-20">
+      <div class="flex full-width flex-j-c grid-c-3">
+        <h2 class="calculator__title">
+          Результат расчета
+        </h2>
+      </div>
+      <div class="calculator__money form form_type_white form_shadowed grid-c-1 flex flex-d-c">
+          Ежедневный расход
+          <div class="text-blue text-header text-header_lvl_2 text-header_offset_none text-bold">
+            138 руб.
+          </div>
+      </div>
+      <div class="calculator__money form form_type_white form_shadowed grid-c-1 flex flex-d-c">
+          Ежедневный расход
+          <div class="text-blue text-header text-header_lvl_2 text-header_offset_none text-bold">
+            138 руб.
+          </div>
+      </div>
+      <div class="calculator__money form form_type_white form_shadowed grid-c-1 flex flex-d-c">
+          Ежедневный расход
+          <div class="text-blue text-header text-header_lvl_2 text-header_offset_none text-bold">
+            138 руб.
+          </div>
+      </div>
+    </div>
+    <h2 class="calculator__title">Подобрать займ</h2>
+    <form class="calculator__form grid grid-t-c-3">
+      <div class="calculator__money">
+        <div class="calculator__text-1">Сколько нужно денег?</div>
+        <input type="text" name="howMuchInputVal" class="calculator__number" min="0" max="100000" value="100 000" readonly>
+        <input type="range" name="howMuchInput" class="calculator__range e-range" min="0" max="100000" value="100000"
+          oninput="updateValByName(this.value,this.name);">
+        <div class="calculator__rub">₽</div>
+      </div>
+      <div class="calculator__money">
+        <div class="calculator__text-1">На какой срок берете?</div>
+        <input type="text" name="timeInputVal" class="calculator__number" min="0" max="48" value="24" readonly>
+        <input type="range" name="timeInput" class="calculator__range e-range" min="0" max="48" value="24"
+          oninput="updateValByName(this.value,this.name);">
+      </div>
+      <div class="calculator__money">
+        <div class="calculator__text-1">Какая процентная ставка?</div>
+        <input type="text" name="percentInputVal" class="calculator__number" min="0" max="100" value="24" readonly>
+        <input type="range" name="percentInput" class="calculator__range e-range" min="0" max="100" value="24"
+          oninput="updateValByName(this.value,this.name);">
+      </div>
+      <div class="calculator__money calculator__text flex full-width flex-j-s flex-ac-s grid-c-2">
+        <button class="button accept__button button_offset_none button_offset-right_big">Добавить отзыв</button>
+        <div class="input input_type_checkbox input_styled">
+          <input type="radio" id="got-summ" name="accept" class="input__upload input__upload_type_checkbox">
+          <div class="input__styled-item input__styled-item_type_checkbox"></div>
+        </div>
+        <label class="label" for="got-summ">
+          На взятую сумму
+        </label>
+        <div class="input input_type_checkbox input_styled">
+          <input type="radio" id="full-summ" name="accept" class="input__upload input__upload_type_checkbox">
+          <div class="input__styled-item input__styled-item_type_checkbox"></div>
+        </div>
+        <label class="label" for="full-summ">
+          На общую сумму
+        </label>
+      </div>
+    </form>
+    <div class="grid grid-t-c-3 grid-g-20">
+      <div class="flex full-width flex-j-c grid-c-3">
+        <h2 class="calculator__title">
+          Результат расчета
+        </h2>
+      </div>
+      <div class="calculator__money form form_type_white form_shadowed grid-c-1 flex flex-d-c">
+        Ежедневный расход
+        <div class="text-blue text-header text-header_lvl_2 text-header_offset_none text-bold">
+          138 руб.
+        </div>
+      </div>
+      <div class="calculator__money form form_type_white form_shadowed grid-c-1 flex flex-d-c">
+        Ежедневный расход
+        <div class="text-blue text-header text-header_lvl_2 text-header_offset_none text-bold">
+          138 руб.
+        </div>
+      </div>
+      <div class="calculator__money form form_type_white form_shadowed grid-c-1 flex flex-d-c">
+        Ежедневный расход
+        <div class="text-blue text-header text-header_lvl_2 text-header_offset_none text-bold">
+          138 руб.
+        </div>
+      </div>
+    </div>
+    <div class="grid-c-3 br br_size_big"></div>
+  </div>
+</div>
+<div class="section container">
+  <div class="grid-c-1">
+    <div class="flex flex-a-fs flex-j-s flex-n-w offset-bottom">
+      <div class="bullet bullet_size_smallest"></div>
+      <div class="text-block text-block_offset_left text-block_lined">
+        <strong>Кэшбек.</strong> Здесь он начисляется в виде рокетрублей (по сути обычные рубли).
+        Ежемесячно банк показывает 5 категорий, из которых вы можете выбрать 3, по которым у вас
+        будет cashback 10%. Кстати, кэшбек здесь без округлений (а многие банки любят этим заниматься).
+      </div>
+    </div>
+    <div class="flex flex-a-fs flex-j-s flex-n-w offset-bottom">
+      <div class="bullet bullet_size_smallest bullet_offset_zero"></div>
+      <div class="text-block text-block_offset_left text-block_lined">
+        <strong>Банкоматы.</strong> Вы можете снимать наличку в любых банкоматах (все равно какой банк).
+        По всему миру. Бесплатно.
+      </div>
+    </div>
+    <div class="flex flex-a-fs flex-j-s flex-n-w offset-bottom">
+      <div class="bullet bullet_size_smallest bullet_offset_zero"></div>
+      <div class="text-block text-block_offset_left text-block_lined">
+        <strong>Доступна с 14 лет.</strong> Ну кто еще так может?
+      </div>
+    </div>
+    <div class="flex flex-a-fs flex-j-s flex-n-w">
+      <div class="bullet bullet_size_smallest"></div>
+      <div class="text-block text-block_offset_left text-block_lined">
+        <strong>Игровой режим.</strong> Это такой повышенный кешбек для геймеров. Если вы пользуетесь
+        PlayStation Store, Steam, Fortnite, Xbox, GOG.com, War Thunder, League Of Legends, Battle.net,
+        Wargaming.net, EVE Online и Origin, то будете получать от 7 до 10% cashback во время распродаж
+        в данных играх/сервисах.
+      </div>
+    </div>
+    <div class="form form_type_blue text-block text-block_offseted grid-c-2 text-strong">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis provident voluptas, eius dolore sapiente a
+      ducimus ut
+      minima quaerat odit nihil! Culpa tempora libero facilis quibusdam beatae labore et quasi.
+    </div>
+    <div class="text-block">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero minus harum sapiente reprehenderit sit molestiae blanditiis ducimus eius magnam ad deserunt in aliquid, rerum accusantium, adipisci mollitia delectus recusandae enim.
+    </div>
+  </div>
+  <div class="grid-c-1 text-block_offset_top">
+    <div class="form">
+      <strong><em>Все данные "Северсталь"</em></strong> публикует в <a href="#" class="link text-underline">пресс-релизах на официальном
+        сайте</a>
+    </div>
+  </div>
+  <!-- Empty column -->
+  <div class="grid-c-2"></div>
+</div>

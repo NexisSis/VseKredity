@@ -78,6 +78,9 @@ a{
 .flex-n-w{
   flex-wrap: nowrap;
 }
+.flex-a-c{
+  align-items: center;
+}
 .flex-a-b{
   align-items:baseline !important;
 }
@@ -126,6 +129,9 @@ a{
     font-weight: bolder;
     margin: 28px 0 40px;
   }
+  &_offset_none{
+    margin: 0;
+  }
 }
 .grid-50-50{
   padding-top: 20px;
@@ -163,6 +169,9 @@ a{
 .grid-c-2{
   grid-column-start: 2 span;
 }
+.grid-c-3{
+  grid-column-start: 3 span;
+}
 .grid-r-1{
   grid-row-start: 1 span;
 }
@@ -172,8 +181,33 @@ a{
 .grid-g-46{
   grid-gap: 46px;
 }
+.grid-g-20{
+  grid-column-gap: 20px;
+}
+.br{
+  &_size_big{
+    margin: 0 10px;
+  }
+  &:after{
+    display: block;
+    content: '*';
+    color: transparent;
+  }
+}
+.text-underline{
+  text-decoration: underline;
+}
+.label{
+  padding: 0 40px 0 10px;
+}
+.flex-ac-s{
+  align-content: flex-start;
+}
 .grid-t-c-4{
   grid-template-columns: repeat(4, 1fr);
+}
+.grid-t-c-3{
+  grid-template-columns: repeat(3, 1fr);
 }
 .smart-break{
   display: block;
@@ -318,6 +352,9 @@ a{
   &_size_medium{
     width: 230px;
   }
+  &_size_big{
+    width: 260px;
+  }
   &_offset_zero{
     margin: 5px;
   }
@@ -327,11 +364,14 @@ a{
   &_offset-left_zero{
     margin-left: 0;
   }
-  &_offset-right_zero{
-    margin-right: 0;
-  }
   &_offset_none{
     margin: 0;
+  }
+  &_offset-right_big{
+    margin-right: 60px
+  }
+  &_offset-right_zero{
+    margin-right: 0;
   }
   &_size_full{
     width: 100%;
@@ -342,6 +382,12 @@ a{
     &:hover{
       box-shadow: 3px 17px 20px -9px $color-lightGray;
     }
+  }
+  &_flexed{
+    display: flex;
+  }
+  &_items-offseted > * {
+    margin: 0 5px;
   }
 }
 .section{
@@ -575,6 +621,10 @@ a{
     font-size: 18px;
     padding: 28px 30px;
   }
+  &_type_white{
+    background: $color-white;
+    position: relative;
+  }
   padding: 20px;
   background-color: $color-lightestGray;
   border-radius: 10px;
@@ -589,6 +639,9 @@ a{
   &_widthOffset_big{
     padding-left: 40px;
     padding-right: 40px;
+  }
+  &_shadowed{
+    box-shadow: 0px 3px 7px rgba(0,0,0, 0.03);
   }
 }
 .input{
