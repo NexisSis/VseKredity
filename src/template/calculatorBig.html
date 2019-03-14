@@ -1,0 +1,31 @@
+<div class="calculatorBig">
+    <div class="container">
+        <div class="preview__breadcrumbs calculator__breadcrumbs flex flex-j-s">
+            <a href="/" class="breadcrumbs__item">ВсеКредиты.ру</a>
+            <a href="/zaimi" class="breadcrumbs__item">Калькулятор займов</a>
+        </div>
+        <h2 class="calculator__title">Калькулятор процентов по займу</h2>
+        <form class="calculator__form flex">
+            <div class="calculator__money third">
+                <div class="calculator__text-1">Сколько нужно денег?</div>
+                <input type="text" name="howMuchInputVal" class="calculator__number" min="0" max="100000" value="100 000" readonly>
+                <input type="range"  name="howMuchInput"  class="calculator__range e-range" min="0" max="100000" value="100000" oninput="updateValByName(this.value,this.name);">
+                <div class="calculator__rub">₽</div>
+            </div>
+            <div class="calculator__money third">
+                <div class="calculator__text-1">На какой срок берете?</div>
+                <input type="text" name="timeInputVal" class="calculator__number" min="0" max="48" value="24" readonly>
+                <input type="range"  name="timeInput"  class="calculator__range e-range" min="0" max="48" value="24" oninput="updateValByName(this.value,this.name);">
+            </div>
+            <div class="calculator__money third">
+                <div class="calculator__text-1">Какая процентная ставка?</div>
+                <input type="text" name="ageInputVal" class="calculator__number" min="0" max="100" value="24" readonly>
+                <input type="range"  name="ageInput"  class="calculator__range e-range" min="0" max="100" value="24" oninput="updateValByName(this.value,this.name);">
+            </div>
+            <button class="calculator__money calculator__text button flex">
+                <img class="calculator__image" src="img/pickup.png" alt="Рассчитать" >
+                <span class="calculator__text-3">Рассчитать</span>
+            </button>
+        </form>
+    </div>
+</div>
