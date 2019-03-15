@@ -87,12 +87,17 @@
     }
     &__link{
       display: none;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      color: #94a6cf;
       margin-left: 0;
       &:hover{
         border-color: transparent;
       }
       &:last-child{
         padding-bottom: 15px;
+        border-color:transparent;
       }
     }
     &__nested{
