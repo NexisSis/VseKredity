@@ -1151,4 +1151,22 @@ h2{
   h2{
     text-align: center;
   }
+  .preview{
+    &__container{
+      flex-direction: column;
+    }
+    &__intro{
+      min-width: 100%;
+    }
+    &__advantages{
+      min-width: 100%;
+      margin-top: 40px !important;
+    }
+  }
+  .intro__logo{
+    display: none;
+  }
+  .section{
+    grid-template-columns: 1fr;
+  }
 }
