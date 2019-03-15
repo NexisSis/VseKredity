@@ -63,4 +63,46 @@
       }
     }
   }
+  &__mobile{
+    display: none!important;
+  }
 }
+
+@media(max-width: 1100px){
+  .header{
+    &__desktop{
+      display: none!important;
+    }
+    &__mobile{
+      display: block!important;
+      &_menu{
+        transition: 500ms;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    &__icon{
+      color: #94a6cf;
+      font-size: 22px;
+    }
+    &__link{
+      display: none;
+      margin-left: 0;
+      &:hover{
+        border-color: transparent;
+      }
+      &:last-child{
+        padding-bottom: 15px;
+      }
+    }
+    &__nested{
+      margin-left: 15px;
+    }
+  }
+  .open{
+    .header__link{
+      display: block;
+    }
+  }
+}
+

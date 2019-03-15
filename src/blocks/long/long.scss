@@ -45,5 +45,44 @@
     margin-top: 11px;
     margin-left: 11px;
   }
+}
+@media(max-width: 868px){
+  .long{
+    &__image{
+      margin-left: 0;
+      margin-top: 0;
+    }
+  }
+}
 
+@media(max-width: 588px) {
+  .long{
+    &__item{
+      padding: 15px 30px;
+    }
+    &__text-1{
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__image{
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__itemChild{
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__location-1{
+      margin-left: 10px;
+    }
+    &__location-2{
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__location-3{
+      justify-content: space-around!important;
+    }
+  }
 }

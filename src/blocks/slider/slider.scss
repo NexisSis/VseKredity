@@ -60,3 +60,11 @@
 .owl-next{
   margin-right: -23px;
 }
+
+@media(max-width: 1100px){
+  .slider{
+    &__position{
+      padding-left: 30px;
+    }
+  }
+}

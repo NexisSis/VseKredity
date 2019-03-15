@@ -7,3 +7,18 @@
     color: black;
   }
 }
+
+@media(max-width: 588px){
+  .footer{
+    padding: 20px!important;
+  }
+  .footer__logo{
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .footer__text{
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}

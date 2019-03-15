@@ -55,3 +55,26 @@
     flex-direction: column;
   }
 }
+
+@media(max-width: 1100px){
+  .main{
+    &__item{
+      &_2{
+        border-left: 0!important;
+        border-top: 1px solid #ddd;
+      }
+      &_3{
+        border-top: 1px solid #ddd;
+      }
+    }
+    &__row{
+      img{
+        margin-top: 80px;
+      }
+    }
+  }
+}
+
+@media(max-width: 588px) {
+
+}

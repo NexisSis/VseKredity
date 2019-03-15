@@ -98,3 +98,22 @@ $starChar: '★';
     box-shadow: 0 0 29px rgba(111,111,111,0.2);
   }
 }
+
+@media(max-width: 1100px){
+  .card{
+    width: 868px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media(max-width: 868px) {
+  .card {
+    width: 588px;
+  }
+}
+@media(max-width: 588px) {
+  .card {
+    width: 299px;
+  }
+}
