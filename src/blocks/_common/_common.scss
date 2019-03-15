@@ -1143,6 +1143,18 @@ h2{
   .star:before{
     display: none;
   }
+  .half-and-quarter,.one-and-sixth{
+    width: 100%;
+  }
+  .form{
+    padding: 10px;
+  }
+  .accept{
+    flex-direction: column;
+    &__form{
+      margin-top: 20px;
+    }
+  }
 }
 @media(max-width: 588px) {
   .grid-c-1{

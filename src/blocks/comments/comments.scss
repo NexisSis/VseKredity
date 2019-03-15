@@ -105,3 +105,36 @@ $color-border-gray: #dddddd;
     margin-bottom: 12px;
   }
 }
+@media(max-width: 1100px){
+  .comments{
+    &__content{
+      grid-template-columns: 100%;
+    }
+    &__cards{
+      padding-left: 0;
+    }
+  }
+  .card-mini{
+    &__image{
+      width: 25%;
+    }
+  }
+  .cards-mini{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -25px;
+  }
+}
+@media(max-width: 550px){
+  .comment{
+    width: 100%;
+    padding: 10px;
+  }
+  .card-mini{
+    width: auto;
+    &__image{
+      width: 100%;
+    }
+  }
+}
