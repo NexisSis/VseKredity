@@ -4,7 +4,7 @@
       <a href="/" class="breadcrumbs__item">ВсеКредиты.ру</a>
       <a href="#" class="breadcrumbs__item">Калькулятор займов</a>
     </div>
-    <h2 class="calculator__title">Подобрать займ</h2>
+    <h2 class="calculator__title calculator__title_lvl_2">Подобрать займ</h2>
     <form class="calculator__form grid grid-t-c-3">
       <div class="calculator__money">
         <div class="calculator__text-1">Сколько нужно денег?</div>
@@ -27,7 +27,7 @@
           oninput="updateValByName(this.value,this.name);">
       </div>
       <div class="calculator__money calculator__text flex full-width flex-j-s">
-        <button class="button button_flexed button_size_big button_offset_none flex-j-c flex-a-c button_items-offseted">
+        <button class="calculator__calc button button_flexed button_size_big button_offset_none flex-j-c flex-a-c button_items-offseted">
           <img class="calculator__image" src="img/pickup.png" alt="Подобрать займ">
           <span>Расчитать</span>
         </button>
@@ -35,52 +35,55 @@
     </form>
     <div class="grid grid-t-c-3 grid-g-20">
       <div class="flex full-width flex-j-c grid-c-3">
-        <h2 class="calculator__title">
+        <h2 class="calculator__title calculator__title_lvl_2">
           Результат расчета
         </h2>
       </div>
-      <div class="calculator__money form form_type_white form_shadowed grid-c-1 flex flex-d-c">
-          Ежедневный расход
-          <div class="text-blue text-header text-header_lvl_2 text-header_offset_none text-bold">
-            138 руб.
-          </div>
+      <div class="calculator__money form form_type_white calculator__calced form_shadowed grid-c-1 flex flex-d-c">
+        Ежедневный расход
+        <div class="text-blue text-header calculator__calced-value text-header_offset_none text-bold">
+          138 руб.
+        </div>
       </div>
-      <div class="calculator__money form form_type_white form_shadowed grid-c-1 flex flex-d-c">
-          Ежедневный расход
-          <div class="text-blue text-header text-header_lvl_2 text-header_offset_none text-bold">
-            138 руб.
-          </div>
+      <div class="calculator__money form form_type_white calculator__calced form_shadowed grid-c-1 flex flex-d-c">
+        Переплата по займу
+        <div class="text-blue text-header calculator__calced-value text-header_offset_none text-bold">
+          6 720 руб.
+        </div>
       </div>
-      <div class="calculator__money form form_type_white form_shadowed grid-c-1 flex flex-d-c">
-          Ежедневный расход
-          <div class="text-blue text-header text-header_lvl_2 text-header_offset_none text-bold">
-            138 руб.
-          </div>
+      <div class="calculator__money form form_type_white calculator__calced form_shadowed grid-c-1 flex flex-d-c">
+        Суппа к возврату
+        <div class="text-blue text-header calculator__calced-value text-header_offset_none text-bold">
+          7 720 руб.
+        </div>
       </div>
     </div>
-    <h2 class="calculator__title">Подобрать займ</h2>
+    <h2 class="calculator__title calculator__title_lvl_2">Про просрочке платежей</h2>
     <form class="calculator__form grid grid-t-c-3">
       <div class="calculator__money">
-        <div class="calculator__text-1">Сколько нужно денег?</div>
+        <div class="calculator__text-1">Сколько дней просрочки?</div>
         <input type="text" name="howMuchInputVal" class="calculator__number" min="0" max="100000" value="100 000" readonly>
         <input type="range" name="howMuchInput" class="calculator__range e-range" min="0" max="100000" value="100000"
           oninput="updateValByName(this.value,this.name);">
         <div class="calculator__rub">₽</div>
       </div>
       <div class="calculator__money">
-        <div class="calculator__text-1">На какой срок берете?</div>
+        <div class="calculator__text-1">Какой процент в день?</div>
         <input type="text" name="timeInputVal" class="calculator__number" min="0" max="48" value="24" readonly>
         <input type="range" name="timeInput" class="calculator__range e-range" min="0" max="48" value="24"
           oninput="updateValByName(this.value,this.name);">
       </div>
       <div class="calculator__money">
-        <div class="calculator__text-1">Какая процентная ставка?</div>
+        <div class="calculator__text-1">Сумма штрафа?</div>
         <input type="text" name="percentInputVal" class="calculator__number" min="0" max="100" value="24" readonly>
         <input type="range" name="percentInput" class="calculator__range e-range" min="0" max="100" value="24"
           oninput="updateValByName(this.value,this.name);">
       </div>
       <div class="calculator__money calculator__text flex full-width flex-j-s flex-ac-s grid-c-2">
-        <button class="button accept__button button_offset_none button_offset-right_big">Добавить отзыв</button>
+        <button class="button button_flexed button_size_big button_offset_none flex-j-c flex-a-c button_offset-right_big button_items-offseted">
+          <img class="calculator__image" src="img/pickup.png" alt="Подобрать займ">
+          <span>Расчитать</span>
+        </button>
         <div class="input input_type_checkbox input_styled">
           <input type="radio" id="got-summ" name="accept" class="input__upload input__upload_type_checkbox">
           <div class="input__styled-item input__styled-item_type_checkbox"></div>
@@ -99,26 +102,26 @@
     </form>
     <div class="grid grid-t-c-3 grid-g-20">
       <div class="flex full-width flex-j-c grid-c-3">
-        <h2 class="calculator__title">
+        <h2 class="calculator__title calculator__title_lvl_2">
           Результат расчета
         </h2>
       </div>
-      <div class="calculator__money form form_type_white form_shadowed grid-c-1 flex flex-d-c">
-        Ежедневный расход
-        <div class="text-blue text-header text-header_lvl_2 text-header_offset_none text-bold">
-          138 руб.
+      <div class="calculator__money form form_type_white calculator__calced form_shadowed grid-c-1 flex flex-d-c">
+        Просрочка
+        <div class="text-blue text-header calculator__calced-value text-header_offset_none text-bold">
+          3 008 руб.
         </div>
       </div>
-      <div class="calculator__money form form_type_white form_shadowed grid-c-1 flex flex-d-c">
-        Ежедневный расход
-        <div class="text-blue text-header text-header_lvl_2 text-header_offset_none text-bold">
-          138 руб.
+      <div class="calculator__money form form_type_white calculator__calced form_shadowed grid-c-1 flex flex-d-c">
+        Переплата в сутки
+        <div class="text-blue text-header calculator__calced-value text-header_offset_none text-bold">
+          1 720 руб.
         </div>
       </div>
-      <div class="calculator__money form form_type_white form_shadowed grid-c-1 flex flex-d-c">
-        Ежедневный расход
-        <div class="text-blue text-header text-header_lvl_2 text-header_offset_none text-bold">
-          138 руб.
+      <div class="calculator__money form form_type_white calculator__calced form_shadowed grid-c-1 flex flex-d-c">
+        Сумма займа с просрочкой
+        <div class="text-blue text-header calculator__calced-value text-header_offset_none text-bold">
+          10 720 руб.
         </div>
       </div>
     </div>
@@ -127,6 +130,9 @@
 </div>
 <div class="section container">
   <div class="grid-c-1">
+    <div class="text-block text-block_offset_bottom">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora necessitatibus animi id? Facere illo, voluptatem quibusdam veniam optio delectus deserunt eum officia earum facilis repudiandae repellat. Voluptatibus non sapiente ratione?
+    </div>
     <div class="flex flex-a-fs flex-j-s flex-n-w offset-bottom">
       <div class="bullet bullet_size_smallest"></div>
       <div class="text-block text-block_offset_left text-block_lined">
@@ -167,7 +173,7 @@
     </div>
   </div>
   <div class="grid-c-1 text-block_offset_top">
-    <div class="form">
+    <div class="form offset-top-zero">
       <strong><em>Все данные "Северсталь"</em></strong> публикует в <a href="#" class="link text-underline">пресс-релизах на официальном
         сайте</a>
     </div>

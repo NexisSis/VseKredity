@@ -5,6 +5,9 @@
   &__form{
 
   }
+  &__calc{
+    margin: 10px 0;
+  }
   &__money{
     position: relative;
     margin-bottom: 23px;
@@ -48,6 +51,13 @@
   &__title{
     padding-top: 0px;
     padding-bottom: 30px;
+    &_lvl_2{
+      font-size: 24px;
+      margin: 24px 0 -5px;
+    }
+  }
+  &__calced{
+    padding: 24px 0;
   }
   &__label{
     @extend .main__label;
@@ -70,6 +80,10 @@
   }
   &__text{
     margin-bottom: 0;
+  }
+  &__calced-value{
+    font-size: 30px;
+    margin-top: 8px;
   }
 }
 
@@ -204,4 +218,3 @@ $lower-background: linear-gradient(to bottom, $lower-color, $lower-color) 100% 5
     background-color: $thumb-hover-color;
   }
 }
-
