@@ -2,16 +2,6 @@ $color-blue: #93a5cf;
 $color-darkGray: #a4a4a4;
 $color-lightGray: #efefef;
 
-.preview__advantages{
-  margin-top: -45px;
-  box-sizing: border-box;
-  padding: 5px;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 50%;
-  grid-row-gap: 30px;
-  grid-column-gap: 15px;
-}
-
 .about-preview{
   background-image: url(../img/about-intro-bg.png);
 }

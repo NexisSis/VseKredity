@@ -59,3 +59,16 @@ $starChar: '★';
 .cards-preview__advantages{
   min-width: 26%;
 }
+
+@media(max-width: 868px){
+  .cards-intro{
+    flex-direction: column;
+    border: none;
+  }
+  .cards-intro__logo{
+    display: none;
+  }
+  .cards-intro__content{
+    padding: 0;
+  }
+}

@@ -1037,6 +1037,15 @@ h2{
   &_not-colored{
     background-color: transparent;
   }
+  &__advantages{
+    margin-top: -45px;
+    box-sizing: border-box;
+    padding: 5px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-row-gap: 30px;
+    grid-column-gap: 15px;
+  }
   &__nav{
     margin-top: 10px;
     display: flex;
@@ -1136,6 +1145,16 @@ h2{
   }
   .grid-c-2{
     grid-column-start: 4 span;
+  }
+  .preview{
+    &__intro{
+      flex-direction: column;
+    }
+    &__advantages{
+      margin-top: 0;
+      padding: 0;
+      width: 100%;
+    }
   }
 }
 

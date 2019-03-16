@@ -114,11 +114,6 @@ $color-border-gray: #dddddd;
       padding-left: 0;
     }
   }
-  .card-mini{
-    &__image{
-      width: 25%;
-    }
-  }
   .cards-mini{
     justify-content: center;
     align-items: center;
@@ -126,10 +121,21 @@ $color-border-gray: #dddddd;
     margin-top: -25px;
   }
 }
+@media(max-width: 686px){
+  .set-appraisa{
+    display: none;
+  }
+}
 @media(max-width: 550px){
   .comment{
-    width: 100%;
     padding: 10px;
+    &__header > .star-modified-1,
+    &__header > .star-modified-2,
+    &__header > .star-modified-3,
+    &__header > .star-modified-4,
+    &__header > .star-modified-5 {
+      display: none
+    }
   }
   .card-mini{
     width: auto;
